@@ -27,7 +27,7 @@ def update():
 
         version = json.loads(response.content)
         if version["version"] > 1:
-            print("\nVersion {} available!".format(version["version"]))
+            print("Version {} available!".format(version["version"]))
             try:
                 print("Downloading updater.")
                 response = requests.get("https://raw.githubusercontent.com/WBRK-dev/minecraft_server_manager/main/updater.py")
