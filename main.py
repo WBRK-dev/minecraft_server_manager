@@ -11,7 +11,6 @@ def config(key, value):
 
         f = open("config.json")
         data = json.load(f)
-        # print(data["minecraft_servers_dir"])
         if value != "":
             print("No setter yet.")
         else:
