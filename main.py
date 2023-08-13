@@ -1,6 +1,4 @@
-import os
-import sys
-import json
+import os, sys, json
 
 def errorMessage(message, command_list):
     print(message)
