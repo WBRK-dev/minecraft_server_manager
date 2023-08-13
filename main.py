@@ -1,5 +1,39 @@
 import os, sys, json
 
+try:
+    import requests
+except:
+    print("The module 'requests' is not installed."); exit()
+
+def update_check():
+    if config("dont_check_for_updates", ""): return
+    try:
+        response = requests.get("https://raw.githubusercontent.com/WBRK-dev/minecraft_server_manager/main/version.json")
+        response.raise_for_status()
+
+        version = json.loads(response.content)
+        if version["version"] > 0:
+            print("\nVersion {} available! Use:\n mcman update".format(version["version"]))
+    except:
+        print("Error while checking for updates.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Server handler
 def errorMessage(message, command_list):
     print(message)
     if command_list: print(" list ( online )\n start [ server_name ]\n stop [ server_name ]\n attach [ server_name ]")
@@ -51,3 +85,5 @@ if len(sys.argv) > 1:
         errorMessage("Invalid argument given.", True)
 else:
     errorMessage("No argument given.", True)
+
+update_check()
