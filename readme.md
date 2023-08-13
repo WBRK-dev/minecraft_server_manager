@@ -27,6 +27,10 @@ The stop command stops a server.
 mcman attach [ server_name ]
 ```
 The attach command attaches a cli output from a server.
+```
+mcman update
+```
+The update command updates the application.
 
 
 ## Installation
