@@ -3,7 +3,7 @@ import sys
 
 def errorMessage(message, command_list):
     print(message)
-    if command_list: print(" list\n start [ server_name ]")
+    if command_list: print(" list ( online )\n start [ server_name ]\n stop [ server_name ]\n attach [ server_name ]")
 
 if len(sys.argv) > 1:
     if sys.argv[1] == "list":
