@@ -8,4 +8,4 @@ async def update():
     with open('main.py', 'wb') as file:
         file.write(response.content)
 
-update()
+asyncio.run(update())
