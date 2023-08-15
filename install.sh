@@ -11,8 +11,8 @@ fi
 
 echo "Downloading packages."
 
-sudo wget -O /opt/minecraft/main.py https://raw.githubusercontent.com/WBRK-dev/minecraft_server_manager/main/main.py
-sudo wget -O /bin/mcman https://raw.githubusercontent.com/WBRK-dev/minecraft_server_manager/main/mcman
+sudo wget -O /opt/minecraft/main.py https://raw.githubusercontent.com/WBRK-dev/minecraft_server_manager/main/main.py > /dev/null 2>&1
+sudo wget -O /bin/mcman https://raw.githubusercontent.com/WBRK-dev/minecraft_server_manager/main/mcman > /dev/null 2>&1
 sudo chmod +x /bin/mcman
 
 echo "Download completed."
