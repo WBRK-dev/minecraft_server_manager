@@ -34,6 +34,11 @@ The update command updates the application.
 
 
 ## Installation
+1. Download the script from releases.
+2. Allow the script to execute.
+3. Execute the script without sudo mode: `./install.sh`
+
+## Install from source
 1. Install the packages: `python3` and `screen`.
 2. Download the latest main.py from the main branch.
 3. Move main.py to a custom location such as '/home/username/apps/mcservermanager/main.py'
