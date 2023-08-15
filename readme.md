@@ -31,6 +31,10 @@ The attach command attaches a cli output from a server.
 mcman update
 ```
 The update command updates the application.
+```
+mcman repair
+```
+The repair command repairs the application.
 
 
 ## Installation
