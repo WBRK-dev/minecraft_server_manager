@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ -f /bin/python3 ]; then
+    python3 /opt/minecraft/main.py
+elif [ -f /bin/python ]; then
+    python /opt/minecraft/main.py
+else
+    echo "Python 3 is not installed."
+fi
