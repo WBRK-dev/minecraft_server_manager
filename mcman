@@ -1,9 +1,16 @@
 #!/bin/bash
 
+if [ "$1" == "update" ] || [ "$1" == "repair" ]; then
+    if [ $1 == "update" ]; then echo "Updating..."; else echo "Repairing..."; fi
+    wget -O /opt/minecraft/main.py https://raw.githubusercontent.com/WBRK-dev/minecraft_server_manager/main/main.py > /dev/null 2>&1
+    if [ $1 == "update" ]; then echo "Done updating."; else echo "Done repairing."; fi
+    exit
+fi
+
 if [ -f /bin/python3 ]; then
-    python3 /opt/minecraft/main.py
+    python3 /opt/minecraft/main.py $1 $2 $3
 elif [ -f /bin/python ]; then
-    python /opt/minecraft/main.py
+    python /opt/minecraft/main.py $1 $2 $3
 else
     echo "Python 3 is not installed."
 fi
