@@ -20,39 +20,6 @@ def update_check():
     except:
         print("Error while checking for updates.")
 
-def update():
-    try:
-        response = requests.get("https://raw.githubusercontent.com/WBRK-dev/minecraft_server_manager/main/version.json")
-        response.raise_for_status()
-
-        version = json.loads(response.content)
-        if version["version"] > 1:
-            print("Version {} available!".format(version["version"]))
-            try:
-                print("Downloading updater.")
-                response = requests.get("https://raw.githubusercontent.com/WBRK-dev/minecraft_server_manager/main/updater.py")
-                response.raise_for_status()
-
-                with open('updater.py', 'wb') as file:
-                    file.write(response.content)
-                print("Updating main.py")
-                try:
-                    subprocess.Popen("python3 updater.py", shell=True); return
-                except: print("Error while launching the updater.")
-            except:
-                print("Error while installing the updater.")
-        else: print("No update available.")
-    except:
-        print("Error while checking for updates."); return
-
-
-
-
-
-
-
-
-
 
 
 # Server handler
@@ -103,8 +70,6 @@ if len(sys.argv) > 1:
             errorMessage("ERROR: This server does not exist.", True)
     elif sys.argv[1] == "attach" and len(sys.argv) == 3:
             os.system("screen -r "+sys.argv[2])
-    elif sys.argv[1] == "update":
-            update()
     else:
         errorMessage("Invalid argument given.", True)
 else:
