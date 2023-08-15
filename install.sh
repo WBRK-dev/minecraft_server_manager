@@ -6,7 +6,7 @@ if [ ! -f /bin/screen ]; then echo "screen is not installed."; screen; exit; fi
 
 if [ ! -d /opt/minecraft/servers ]; then
     echo "Creating minecraft folder."
-    mkdir -p /opt/minecraft/servers
+    sudo mkdir -p /opt/minecraft/servers
 fi
 
 echo "Downloading packages."
