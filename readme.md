@@ -16,6 +16,14 @@ mcman list online
 ```
 The list online command lists all the online minecraft servers.
 ```
+mcman install [ path_to_server_installer ] [ server_name ]
+```
+The install command installs a server using the provided jar.
+```
+mcman remove [ server_name ]
+```
+The remove command removes/deletes a server from your machine.
+```
 mcman start [ server_name ]
 ```
 The start command starts a server.
